@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Crush's Special Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About You</a></li>
+                <li><a href="#reasons">Reasons</a></li>
+                <li><a href="#message-form">Send Message</a></li>
+            </ul>
+        </nav>
+        <div id="theme-toggle" onclick="toggleTheme()">Switch Theme</div>
+    </header>
+
+    <section id="hero">
+        <h1 id="greeting"></h1>
+        <img src="crush-photo.jpg" alt="Crush Image" class="crush-photo">
+        <p class="quote">"You light up my world like nobody else."</p>
+    </section>
+
+    <section id="about">
+        <h2>About You</h2>
+        <p>You make everything brighter and better. Your smile, your energy, and your kindness are unmatched.</p>
+    </section>
+
+    <section id="reasons">
+        <h2>Reasons You're Awesome</h2>
+        <ul id="reasons-list"></ul>
+        <button onclick="addReason()">Add a Reason</button>
+    </section>
+
+    <section id="message-form">
+        <h2>Send a Message</h2>
+        <form onsubmit="sendMessage(event)">
+            <label for="message">Your Message:</label>
+            <input type="text" id="message" name="message" placeholder="Write a message to your crush..." required>
+            <button type="submit">Send</button>
+        </form>
+        <p id="confirmation" style="display:none; color:green;">Your message has been sent!</p>
+    </section>
+
+    <footer>
+        <p>Made with 💖 for you</p>
+    </footer>
+
+    <canvas id="confetti-canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+
+</html>
